@@ -1,19 +1,44 @@
 ---
+- name: Create minecraft group
+  group:
+    name: 'minecraft'
+    state: present
+
+- name: Create minecraft user
+  user:
+    name: 'minecraft'
+    comment: 'Minecraft Account'
+    groups: 'minecraft'
+    state: 'present'
+
 - name: Create a directory for the minecraft server
   file:
     path: '/opt/minecraft'
     state: directory
+    owner: 'minecraft'
+    group: 'minecraft'
     mode: 0755
 
 - name: Download minecraft server jar file
   get_url:
     url: 'https://s3.amazonaws.com/Minecraft.Download/versions/1.12/minecraft_server.1.12.jar'
     dest: '/opt/minecraft'
+    owner: 'minecraft'
+    group: 'minecraft'
     mode: 0644
 
-- name: Replace eula.txt
+- name: Copy eula.txta with eula set to true
   copy:
     src: 'eula.txt'
     dest: '/opt/minecraft/eula.txt'
+    owner: 'minecraft'
+    group: 'minecraft'
     mode: 0644
   
+- name: Copy my server.properties file
+  copy:
+    src: 'server.properties'
+    dest: '/opt/minecraft/server.properties'
+    owner: 'minecraft'
+    group: 'minecraft'
+    mode: 0644
