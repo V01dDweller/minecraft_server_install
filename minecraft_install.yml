@@ -1,0 +1,5 @@
+---
+- hosts: minecraft
+  become: True
+  roles:
+  - minecraft_server_install

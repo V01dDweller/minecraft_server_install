@@ -1,0 +1,19 @@
+---
+- name: Create a directory for the minecraft server
+  file:
+    path: '/opt/minecraft'
+    state: directory
+    mode: 0755
+
+- name: Download minecraft server jar file
+  get_url:
+    url: 'https://s3.amazonaws.com/Minecraft.Download/versions/1.12/minecraft_server.1.12.jar'
+    dest: '/opt/minecraft'
+    mode: 0644
+
+- name: Replace eula.txt
+  copy:
+    src: 'eula.txt'
+    dest: '/opt/minecraft/eula.txt'
+    mode: 0644
+  
