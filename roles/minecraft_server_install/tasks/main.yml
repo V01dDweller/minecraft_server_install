@@ -1,3 +1,4 @@
+# file: roles/minecraft_server_install/tasks/main.yml
 ---
 - name: Create minecraft group
   group:
