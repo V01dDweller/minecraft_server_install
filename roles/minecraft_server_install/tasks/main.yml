@@ -9,15 +9,8 @@
     name: 'minecraft'
     comment: 'Minecraft Account'
     groups: 'minecraft'
+    home: '/opt/minecraft'
     state: 'present'
-
-- name: Create a directory for the minecraft server
-  file:
-    path: '/opt/minecraft'
-    state: directory
-    owner: 'minecraft'
-    group: 'minecraft'
-    mode: 0755
 
 - name: Download minecraft server jar file
   get_url:
