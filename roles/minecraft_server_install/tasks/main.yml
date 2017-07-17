@@ -4,11 +4,11 @@
     name: 'minecraft'
     state: present
 
-- name: Create minecraft user
+- name: Create minecraft user with /opt/minecraft home directory
   user:
     name: 'minecraft'
     comment: 'Minecraft Account'
-    groups: 'minecraft'
+    group: 'minecraft'
     home: '/opt/minecraft'
     state: 'present'
 
@@ -28,7 +28,7 @@
     group: 'minecraft'
     mode: 0644
   
-- name: Copy my server.properties file
+- name: Copy server.properties file
   copy:
     src: 'server.properties'
     dest: '/opt/minecraft/server.properties'
