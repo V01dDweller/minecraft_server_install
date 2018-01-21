@@ -1,5 +1,6 @@
 ---
-- hosts: all
+- name: Install Minecraft server
+  hosts: all
   become: True
   roles:
   - minecraft_server_install
