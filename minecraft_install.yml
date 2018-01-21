@@ -1,5 +1,5 @@
 ---
-- name: Install Minecraft server
+- name: Install Minecraft Server Edition
   hosts: all
   become: True
   roles:
