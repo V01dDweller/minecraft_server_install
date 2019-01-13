@@ -1,6 +1,6 @@
 # Minecraft Server Install #
 
-This is a basic ansible role that downloads and installs the Minecraft server jar into /opt/minecraft. 
+This is a basic ansible role that downloads and installs the Minecraft server jar into /opt/minecraft. It assumes Java is already installed.
 
 ```
 minecraft_server_install
