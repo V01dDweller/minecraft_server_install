@@ -1,6 +1,8 @@
+# file: minecraft_install.yml
 ---
 - name: Install Minecraft Server Edition
   hosts: all
-  become: True
+  become: true
+  gather_facts: no
   roles:
   - minecraft_server_install
