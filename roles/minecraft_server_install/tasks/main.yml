@@ -15,7 +15,7 @@
 
 - name: Download minecraft server jar file
   get_url:
-    url: 'https://launcher.mojang.com/v1/objects/3737db93722a9e39eeada7c27e7aca28b144ffa7/server.jar'
+    url: 'https://launcher.mojang.com/v1/objects/808be3869e2ca6b62378f9f4b33c946621620019/server.jar'
     dest: '/opt/minecraft'
     owner: 'minecraft'
     group: 'minecraft'
