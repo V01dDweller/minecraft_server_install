@@ -1,4 +1,4 @@
-# Minecraft Server 1.14.2 Install #
+# Minecraft Server 1.14.4 Install #
 
 This is a basic ansible playbook and role, intended for Linux, that
 downloads and installs the Minecraft server jar into /opt/minecraft. It
