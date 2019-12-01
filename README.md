@@ -13,6 +13,8 @@ minecraft_server_install
         ├── files
         │   ├── eula.txt
         │   └── server.properties
+        ├── meta
+        │   └── main.yml
         └── tasks
             └── main.yml
 ```
